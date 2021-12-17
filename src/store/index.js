@@ -22,7 +22,7 @@ export default new Vuex.Store({
   },
   actions: {
     loadItems ({ commit }) {
-      axios.get('https://api.punkapi.com/v2/beers', {})
+      axios.get('/.netlify/functions/beers', {})
         .then(response => response.data)
         .then(items => {
           commit('SET_Items', items)
